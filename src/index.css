@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+  /* text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* Background Gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Text */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(240deg, var(--soft-violet), var(--soft-blue));
+  padding: 2rem;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 0.1px);
+}
+
+.container{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  padding-top: 20%;
+  padding-bottom: 15%;
+  position: relative;
+  width: 90%;
+  max-width: 100%;
+}
+
+.container article:first-child img{
+  position: absolute;
+  transform: translate(35%, -113%);
+  width: 50%;
+}
+
+.container article:nth-child(2) h1{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.article-question{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qna{
+  border-bottom: 1px solid var(--light-grayish-blue);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
+
+.icon{
+  color: var(--soft-red);
+}
+
+.answer{
+  color: gray;
+  line-height: 25px;
+  margin: 0 0 1rem;
+  width: 80%;
+}
+
+.clicked{
+  font-weight: 700;
+}
+
+@media (min-width: 601px){
+  .container{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    padding-bottom: 10%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 775px;
+  }
+
+  .container article:first-child img{
+    position: absolute;
+    transform: translate(-25%, 10%);
+    
+  }
+
+  .container article:first-child img:nth-child(3){
+    width: 10rem;
+    transform: translate(-68%, 100%);
+  }
+
+  .container article:nth-child(2) h1{
+    text-align: left;
+  }
+
+  .answer{
+    width: 90%;
+  }
+}
